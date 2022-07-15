@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Delegates
 {
-    internal interface IChoise
+    internal interface IChoise<T>
     {
-        public MyCollection ReturnCollection(Predicate<int> predicate);
+        public MyCollection<T> ReturnCollection(Predicate<int> predicate);
     }
 }

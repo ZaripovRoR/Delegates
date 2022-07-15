@@ -10,7 +10,7 @@ namespace Delegates
     {
         public static bool per(int a)
         {
-            if (a > 0)
+            if (a > 3)
             {
                 return true;
             }
@@ -27,7 +27,7 @@ namespace Delegates
         {
             Console.WriteLine("Выбирете функцию:\n 1.Addition\n 2.Subtraction\n 3.Mulityplaction\n 4.Division");
             var x=Console.ReadLine();
-            Console.WriteLine("Введите числo: ");
+            Console.WriteLine("Введите числo   : ");
             
             var b= Convert.ToDouble(Console.ReadLine());
             switch (x)

@@ -8,32 +8,33 @@ namespace Delegates
 {
     delegate string MyDelgate();
 
-    internal class MyCollection : IChoise
+    internal class MyCollection<T> : IChoise<T>
     {
-        public int[] Arr {get;set; }
-        public MyCollection(int[] arr)
+        DoubleChainList<T> Arr = new DoubleChainList<T>();
+        public MyCollection(DoubleChainList<T> arr)
         {
             Arr = arr;
         }
 
-        public MyCollection ReturnCollection(Predicate<int> predicate)
+        public MyCollection<T> ReturnCollection(Predicate<T> predicate)
         {
             int q = 0;
-            int[] NewArr = new int[Arr.Length];
-            foreach (int i in Arr)
+            x
+            DoubleChainList<T> NewArr = new DoubleChainList<T>();
+            while (q!=Arr.Length)
             {
-                if (predicate(i))
+                if (predicate())
                 {
-                    NewArr[q] = i;
+                    NewArr = i;
                     q++;
                 }
-
             }
-            return new MyCollection(NewArr) ;
+            
+            return new MyCollection<T>(NewArr) ;
         }
         public void Print()
         {
-            foreach (int i in Arr)
+            foreach (T i in Arr)
             {
                 Console.WriteLine(i);
             }
